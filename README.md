@@ -3,16 +3,23 @@ Project of Udacity FEND program - Front-end applications
 
 ## Project Overview
 
-You will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+You start with a static design that lacks accessibility and you'll convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
 
 ### Specification
 
 The code has a lot of issues:
-- it’s barely usable on a desktop browser, much less a mobile device.
-- it also doesn’t include any standard accessibility features
+- it’s barely usable on a desktop browser, much less a mobile device,
+- it also doesn’t include any standard accessibility features,
 - and it doesn’t work offline at all.
 
 Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+
+### Requirements
+**Make the provided site fully responsive:** all of the page elements should be usable and visible in any viewport, including desktop, tablet, and mobile displays. Images shouldn't overlap, and page elements should wrap when the viewport is too small to display them side by side.
+
+**Make the site accessible:** using what you've learned about web accessibility, ensure that alt attributes are present and descriptive for images. Add screen-reader-only attributes when appropriate to add useful supplementary text. Use semantic markup where possible, and aria attributes when semantic markup is not feasible.
+
+**Cache the static site for offline use:** using Cache API and a ServiceWorker, cache the data for the website so that any page (including images) that has been visited is accessible offline.
 
 ### What do I do from here?
 
@@ -21,8 +28,6 @@ Your job is to update the code to resolve these issues while still maintaining t
 In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
 
 2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
 
 ## Leaflet.js and Mapbox:
 
