@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   background-color: #fdfdfd;
   color: #333;
   line-height: 1.5;
@@ -110,7 +111,7 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  min-height: 50px;
+  min-height: 5em;
   background-color: #252831;
   display: flex;
   flex-direction: column;
@@ -122,7 +123,7 @@ nav h1 a {
   font-size: 1.3rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0em 2em;
+  margin: 1em 2em 0 2em;
 }
 
 .filter-options select {
@@ -130,10 +131,9 @@ nav h1 a {
   border: 1px solid #fff;
   font-size: 1.3em;
   height: 2em;
-  letter-spacing: 0;
   margin: 1em;
   padding: 0 1em;
-  width: 20em;
+  width: 15em;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -209,8 +209,8 @@ nav h1 a {
   height: 87%;
   position: fixed;
   right: 0;
-  top: 80px;
-  width: 50%;
+  top: 8em;
+  width: 100%;
 }
 
 .inside #map {
@@ -222,7 +222,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 
 #restaurant-name {
