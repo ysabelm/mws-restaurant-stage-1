@@ -70,7 +70,7 @@ nav h1 a {
   list-style: none;
   background-color: #eee;
   margin: 0;
-  width: calc(50% - 0.8em);
+  width: calc(50% - 5.65em);
 }
 
 /* Display list items side by side */
@@ -82,7 +82,7 @@ nav h1 a {
 /* Add a slash symbol (/) before/behind each list item */
 
 #breadcrumb li+li:before {
-  padding: 0.8em;
+  padding: 0.2em;
   color: black;
   content: "/\00a0";
 }
@@ -141,7 +141,7 @@ nav h1 a {
 #restaurants-list {
   list-style: outside none none;
   margin: 0;
-  padding: 3em 1.5em 6em;
+  padding: 0.5em 1.5em 6em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -198,7 +198,7 @@ nav h1 a {
   height: 87%;
   position: fixed;
   right: 0;
-  top: 8em;
+  top: 5em;
   width: 40%;
 }
 
@@ -208,7 +208,7 @@ nav h1 a {
 }
 
 #restaurant-container {
-  padding: 10em 2em 2em;
+  padding: 13em 2em 2em;
 }
 
 #restaurant-name {
@@ -248,7 +248,7 @@ nav h1 a {
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  width: 50%;
+  width: calc(50% - 40px);
 }
 
 #reviews-container {
