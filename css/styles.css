@@ -161,6 +161,7 @@ nav h1 a {
   max-width: 100%;
 }
 
+/* h1 --> h2 in main.js */
 #restaurants-list li h1 {
   color: #f18200;
   font-size: 1.4em;
