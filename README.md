@@ -12,14 +12,14 @@ The code has a lot of issues:
 - it also doesn’t include any standard accessibility features,
 - and it doesn’t work offline at all.
 
-Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+Therfore the tasks are about updating the code to resolve these issues while still maintaining the included functionality. 
 
 ### Requirements
 **Make the provided site fully responsive:** all of the page elements should be usable and visible in any viewport, including desktop, tablet, and mobile displays. Images shouldn't overlap, and page elements should wrap when the viewport is too small to display them side by side.
 
-**Make the site accessible:** using what you've learned about web accessibility, ensure that alt attributes are present and descriptive for images. Add screen-reader-only attributes when appropriate to add useful supplementary text. Use semantic markup where possible, and aria attributes when semantic markup is not feasible.
+**Make the site accessible:** alt attributes should be present and descriptive for images. Screen-reader-only attributes when appropriate are used adding useful supplementary text. Adding semantic markup where possible, and aria attributes when semantic markup is not feasible will be a good practice.
 
-**Cache the static site for offline use:** using Cache API and a ServiceWorker, cache the data for the website so that any page (including images) that has been visited is accessible offline.
+**Cache the static site for offline use:** using Cache API and a ServiceWorker, the data for the website will be cached so that any page (including images) that has been visited is accessible offline.
 
 ### What do I do from here?
 
@@ -31,7 +31,7 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 
 ## Leaflet.js and Mapbox:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use. 
 
 ### Note about ES6
 
