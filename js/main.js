@@ -78,7 +78,7 @@ initMap = () => {
     scrollWheelZoom: false
   });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: '<>',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -88,18 +88,6 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
 
 /**
  * Update page and map for current restaurants.
@@ -158,13 +146,33 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
+  // Adds picture for accessibility, responsive and performance
+  const picture = document.createElement('picture');
+  li.append(picture);
+
+  /* Adds 2 sources with srcset and media linked to the picture tag */
+  const sourceSmall = document.createElement('source');
+  sourceSmall.setAttribute('class', 'source-small');
+  sourceSmall.srcset = DBHelper.smallImageUrlForRestaurant(restaurant) + ' 1x';
+  sourceSmall.media = '(max-width: 450px)';
+  picture.append(sourceSmall);
+
+  const sourceLarge = document.createElement('source');
+  sourceLarge.setAttribute('class', 'source-Large');
+  sourceLarge.srcset = DBHelper.imageUrlForRestaurant(restaurant);
+  sourceLarge.media = '(min-width: 451px)';
+  picture.append(sourceLarge);
+
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
+  image.alt = restaurant.name + 'Restaurant';
+  picture.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute('aria-level', '2');
+  name.setAttribute('role', 'heading');
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -178,6 +186,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('aria-label', `More informations about ${restaurant.name}`);
   li.append(more)
 
   return li
@@ -199,17 +208,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
-
 
 /**
  * Register a service worker.
