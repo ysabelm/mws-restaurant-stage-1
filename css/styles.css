@@ -115,7 +115,6 @@ nav h1 a {
   background-color: #0d47a1;
 }
 
-
 /* Add a color on mouse-over */
 
 #breadcrumb li a:hover {
@@ -392,7 +391,7 @@ header {
   }
 }
 
-@media screen and (min-width:700px) {
+@media screen and (max-width:700px) {
   nav h1 a {
     letter-spacing: 0;
   }
